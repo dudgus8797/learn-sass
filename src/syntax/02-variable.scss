@@ -1,0 +1,33 @@
+$base-color: #bf2243;
+$border-color: rgba($base-color, 0.7);
+$variable: 1rem;
+.alert {
+  border: 1px solid $border_color; // ←
+}
+
+:root {
+  --primatry-color: red;
+}
+
+$color: #05d156;
+.rule-1 {
+  $variable: 2rem;
+
+  color: $color;
+  background: var(--parimary-color);
+}
+//!default는 베이스 컬러가 없는경우 대체돼서 베이스 컬러가 됨
+$base-color: #3b093c !default;
+
+:root {
+  --parimary-color: blue;
+}
+:root {
+  --parimary-color: yellow;
+}
+
+$color: #49abe4;
+.rule-2 {
+  color: $base-color;
+  background: var(--parimary-color);
+}
